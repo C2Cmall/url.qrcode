@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>qrcode生成二维码</title>
+</head>
+<body>
+	<script src="https://cdn.c2cmalls.com/jquery/1.2.3/jquery.min.js"></script>
+	<script src="https://cdn.c2cmalls.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <button id="mybutton">点击生成二维码</button>
+    <div id="code2"></div>
+	<script>
+	$(function(){
+        $('#mybutton').one('click',function(){           
+            var myURL=window.location.href;
+            $('#code2').qrcode({                         //指定大小和类型的二维码
+            render:"canvas",
+			width:200,      
+			height:200,
+			text: myURL,
+		});
+        })  
+    })   
+    </script>
+</body>
+</html>
+	
